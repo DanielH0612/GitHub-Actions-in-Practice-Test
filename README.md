@@ -1,6 +1,6 @@
 # GitHub Actions in Practice Test
 
-A simple JavaScript project created to practise version control, code quality tools, testing, Git hooks, and GitHub Actions.
+This project was created to practise version control, clean code, testing, Git hooks, and GitHub Actions.
 
 ## Tools Used
 
@@ -37,9 +37,9 @@ npm install
 
 ## Prettier
 
-Prettier is used to ensure consistent code formatting.
+Prettier is used to keep the code formatting consistent.
 
-Run:
+Run Prettier with:
 
 ```bash
 npm run format
@@ -47,9 +47,9 @@ npm run format
 
 ## ESLint
 
-ESLint is used to check the JavaScript code for problems and maintain consistent code quality.
+ESLint is used to check the JavaScript code for errors and code-quality issues.
 
-Run:
+Run ESLint with:
 
 ```bash
 npm run lint
@@ -57,9 +57,9 @@ npm run lint
 
 ## Testing
 
-Jest is used to test the JavaScript code.
+Jest is used for testing the JavaScript code.
 
-Run:
+Run the tests with:
 
 ```bash
 npm test
@@ -71,17 +71,21 @@ The project contains a simple `add` function in `math.js` and a corresponding te
 
 Husky is used to create a Git pre-commit hook.
 
-Before a commit is completed, Husky runs lint-staged.
+When a commit is made, Husky runs lint-staged automatically.
 
-lint-staged runs Prettier and ESLint on staged JavaScript and JSON files.
+lint-staged runs Prettier and ESLint on staged JavaScript and JSON files before the commit is completed.
 
-This helps ensure that code is formatted and checked before it is committed to the repository.
+This helps ensure that committed code is properly formatted and passes the linting checks.
 
 ## GitHub Actions
 
-A GitHub Actions workflow is included in the `.github/workflows` directory.
+The project contains a GitHub Actions workflow inside:
 
-The workflow automatically runs project checks when changes are pushed to the repository.
+```text
+.github/workflows/main.yml
+```
+
+The workflow automatically runs checks when changes are pushed to the repository.
 
 ## Project Structure
 
@@ -101,6 +105,6 @@ README.md
 
 ## Purpose
 
-This project was created as part of a lesson about version control, clean code, testing, GitHub, and workplace development best practices.
+The purpose of this project is to practise setting up a JavaScript project using version control and common development tools.
 
 The repository can also be used as a template for future JavaScript projects.
