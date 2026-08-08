@@ -4,9 +4,10 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "format": "prettier --check .",
-    "lint": "eslint ."
+  "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+  "format": "prettier --check .",
+  "lint": "eslint .",
+  "prepare": "husky"
   },
   "jest": {
     "testEnvironment": "node"
@@ -25,7 +26,15 @@
     "babel-jest": "^30.4.1",
     "eslint": "^9.39.5",
     "globals": "^17.9.0",
+    "husky": "^9.1.7",
     "jest": "^30.4.2",
+    "lint-staged": "^15.5.2",
     "prettier": "^3.9.6"
+  },
+  "lint-staged": {
+  "*.{js,json}": [
+    "prettier --write",
+    "eslint --fix"
+  ]
   }
 }
